@@ -9,11 +9,17 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-div{
+div {
   box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
+  color: #222;
 }
 .search-index {
   display: flex;
@@ -27,68 +33,146 @@ a {
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
-
-
 }
 .search {
-
   // border: 1px solid #ccc;
   margin: 7px 10px;
   border-radius: 5px;
   height: 28px;
-  // box-sizing 边框加padding， 行高算的时候要去除这两项 
+  // box-sizing 边框加padding， 行高算的时候要去除这两项
   line-height: 24px;
   padding: 2px 5px;
   border-radius: 15px;
   background-color: #fff;
   color: #666;
-  font-size: .94rem;
+  font-size: 0.94rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-span{
-  padding-left: 35px;
-    &::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35px;
-    height: 100%;
-    overflow: hidden;
-    background: url(//pic.c-ctrip.com/platform/h5/home/home-common-sprite2x@v7.15.png) 15px 7px no-repeat;
-    background-size: 21px auto;
-    content: "";
+  span {
+    padding-left: 35px;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35px;
+      height: 100%;
+      overflow: hidden;
+      background: url(//pic.c-ctrip.com/platform/h5/home/home-common-sprite2x@v7.15.png) 15px 7px
+        no-repeat;
+      background-size: 21px auto;
+      content: '';
+    }
   }
-}
-
-
 }
 .user {
   width: 44px;
   height: 44px;
-  background-color:  #4db2ee;
+  background-color: #4db2ee;
   font-size: 12px;
   text-align: center;
   color: #fff;
 
-  
-  &::before{
+  &::before {
     content: '';
     display: block;
     width: 22px;
-    height: 22px;       
-    margin:4px auto -1px ;
+    height: 22px;
+    margin: 4px auto -1px;
     background: url(../images/home-common-sprite2x@v7.15.png) 1px -36px no-repeat;
     background-size: 21px auto;
   }
 }
 
-.focus{
-  margin-top:44px;
+.focus {
+  margin-top: 44px;
   img {
     width: 100%;
+  }
+}
+
+.local-nav {
+  // height: 64px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 3px 4px;
+
+  display: flex;
+  li {
+    flex: 1;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+      [class^='local-nav-icon'] {
+        height: 40px;
+        width: 40px;
+        background-color: pink;
+        margin-top: 8px;
+        background: url(../images/home-fivemain-sprite2x@v7.15.png) 0px 0px no-repeat;
+        background-size: 40px auto;
+      }
+      .local-nav-icon-icon2 {
+        background-position: 0 -40px;
+      }
+
+      .local-nav-icon-icon3 {
+        background-position: 0 -80px;
+      }
+
+      .local-nav-icon-icon4 {
+        background-position: 0 -120px;
+      }
+
+      .local-nav-icon-icon5 {
+        background-position: 0 -160px;
+      }
+    }
+  }
+}
+
+nav {
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 4px 3px;
+  .nav-common {
+    display: flex;
+    height: 88px;
+    background-color: pink;
+    &:nth-child(2) {
+      margin: 3px 0;
+    }
+    .nav-items {
+      flex: 1;
+      // -n+2 就是选择前面两个
+      &:nth-child(-n + 2) {
+        border-right: 1px solid #fff;
+      }
+      display: flex;
+      flex-direction: column;
+      a {
+        flex: 1;
+        text-align: center;
+        font-size: 14px;
+        line-height: 44px;
+        // 文字阴影
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        &:nth-child(1) {
+          border-bottom: 1px solid #fff;
+        }
+      }
+      &:nth-child(1) {
+        a {
+          border: 0;
+          background: url(../images/grid-nav-items-hotel@v7.15.png) no-repeat bottom center;
+          background-size: 120px auto;
+        }
+      }
+    }
   }
 }

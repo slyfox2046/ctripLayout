@@ -11,8 +11,14 @@ body {
 div {
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 a {
   text-decoration: none;
+  color: #222;
 }
 .search-index {
   display: flex;
@@ -56,7 +62,7 @@ a {
   overflow: hidden;
   background: url(//pic.c-ctrip.com/platform/h5/home/home-common-sprite2x@v7.15.png) 15px 7px no-repeat;
   background-size: 21px auto;
-  content: "";
+  content: '';
 }
 .user {
   width: 44px;
@@ -80,4 +86,76 @@ a {
 }
 .focus img {
   width: 100%;
+}
+.local-nav {
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 3px 4px;
+  display: flex;
+}
+.local-nav li {
+  flex: 1;
+}
+.local-nav li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.local-nav li a [class^='local-nav-icon'] {
+  height: 40px;
+  width: 40px;
+  background-color: pink;
+  margin-top: 8px;
+  background: url(../images/home-fivemain-sprite2x@v7.15.png) 0px 0px no-repeat;
+  background-size: 40px auto;
+}
+.local-nav li a .local-nav-icon-icon2 {
+  background-position: 0 -40px;
+}
+.local-nav li a .local-nav-icon-icon3 {
+  background-position: 0 -80px;
+}
+.local-nav li a .local-nav-icon-icon4 {
+  background-position: 0 -120px;
+}
+.local-nav li a .local-nav-icon-icon5 {
+  background-position: 0 -160px;
+}
+nav {
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 4px 3px;
+}
+nav .nav-common {
+  display: flex;
+  height: 88px;
+  background-color: pink;
+}
+nav .nav-common:nth-child(2) {
+  margin: 3px 0;
+}
+nav .nav-common .nav-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+nav .nav-common .nav-items:nth-child(-n + 2) {
+  border-right: 1px solid #fff;
+}
+nav .nav-common .nav-items a {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  line-height: 44px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+nav .nav-common .nav-items a:nth-child(1) {
+  border-bottom: 1px solid #fff;
+}
+nav .nav-common .nav-items:nth-child(1) a {
+  border: 0;
+  background: url(../images/grid-nav-items-hotel@v7.15.png) no-repeat bottom center;
+  background-size: 120px auto;
 }
